@@ -11,4 +11,3 @@ req.add_header("User-Agent",
 response = request.urlopen(req)
 
 print(response.read().decode('utf-8'))
-
