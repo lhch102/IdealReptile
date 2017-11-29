@@ -1,13 +1,17 @@
 # -*- coding:utf-8 -*-
-from urllib import request
+from urllib import request, parse
 
-url = "https://www.baidu.com/"
-# 直接请求
+# 网址
+url = "http://210.51.169.193:8080/login.html"
 
-req = request.Request(url)
-req.add_header("User-Agent",
-               "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) "
-               "Chrome/62.0.3202.94 Safari/537.36")
-response = request.urlopen(req)
+headers = {
+    'User-Agent': r'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)'
+                  r'Chrome/43.0.2357.81 Safari/537.36',
+    'Referer': r'http://210.51.169.193:8080/login.html',
+    'Content-Type': r'application/json; charset=UTF-8'
+}
+data = {'user': {'userName': '60000852', 'password': '60000852'}, 'loginURL': 'http://210.51.169.193:8080/login.html'}
+parmas = request.urlencode(data)
+req = request.urlopen(url, parmas)
 
-print(response.read().decode('utf-8'))
+print(req)
