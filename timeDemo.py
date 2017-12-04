@@ -1,8 +1,19 @@
 import datetime
 
-datetimeDate = datetime.date
-firstDay = datetimeDate(datetimeDate.today().year, datetimeDate.today().month, 1)
-print("月初 %s " % firstDay)
-# 今天的日期
-currentDate = datetime.datetime.today().date()
-print("今天 %s" % currentDate)
+
+# 获取月初第一天的日期
+def getFirstDay():
+    datetimeDate = datetime.date
+    getfirstDay = datetimeDate(datetimeDate.today().year, datetimeDate.today().month, 1)
+    return getfirstDay
+
+
+# 获取当前日期
+def currentDate():
+    # 今天的日期
+    currentDate = datetime.datetime.today().date()
+    return currentDate
+
+
+if __name__ == '__main__':
+    print(getFirstDay())
