@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import datetime
 
 
@@ -17,3 +18,6 @@ def currentDate():
 
 if __name__ == '__main__':
     print(getFirstDay())
+    a = 10
+    b = 100
+    print(b // a)
