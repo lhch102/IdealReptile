@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import datetime
+import datetime,time
 
 
 # 获取月初第一天的日期
@@ -17,7 +17,13 @@ def currentDate():
 
 
 if __name__ == '__main__':
-    print(getFirstDay())
-    a = 10
-    b = 100
-    print(b // a)
+    # print(getFirstDay())
+    # a = 10
+    # b = 100
+    # 09:20:27
+    working_time = '10:20:27'
+    date1=datetime.datetime.strptime(working_time,"%H:%M:%S")
+    date2=datetime.datetime.strptime('9:05:59',"%H:%M:%S")
+    s = date1-date2
+    s.strftime('%Y-%m-%d')
+    print(s)
