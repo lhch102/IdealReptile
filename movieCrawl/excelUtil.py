@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 # 读写2007 excel
-import openpyxl
 import xlwt
 
 def write07Excel(i,title,rate,casts):
