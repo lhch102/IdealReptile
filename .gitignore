@@ -9,3 +9,4 @@ out
 gen
 /.idea/
 movieCrawl/__pycache__/
+venv
